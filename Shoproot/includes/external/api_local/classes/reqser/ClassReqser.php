@@ -36,7 +36,7 @@ class ClassReqser extends api_local\ApiBase {
   public function __construct($subp = '') {
     parent::__construct($subp);
 
-    $this->api_reqser_version = '2.1';
+    $this->api_reqser_version = '2.3';
     $this->browser_mode = false;
     $this->dev_mode = true;
     $this->write_control_mode = false;
@@ -88,7 +88,8 @@ class ClassReqser extends api_local\ApiBase {
                                                                                         'shop_version' => $this->getShopVersion(),
                                                                                         'files_activated' => ($this->lf === true ? '1' : '0'),
                                                                                         'files_automated' => (($this->lf === true && MODULE_SYSTEM_REQSER_LANGUAGE_FILES_SETTING == 'true') ? '1' : '0'),
-                                                                                        'language_add_allowed' => ($this->ala === true ? '1' : '0')
+                                                                                        'language_add_allowed' => ($this->ala === true ? '1' : '0'),
+                                                                                        'reseller_id' => $this->getResellerId(),
                                                                                        )
                                                                        )
                                                        ),
@@ -263,7 +264,7 @@ class ClassReqser extends api_local\ApiBase {
         }
         if(sizeof($iwl_arr) > 0) {
           foreach($iwl_arr as $iwl_id) {
-            if(array_key_exists($this->iwl, $language_array)) {
+            if(array_key_exists($iwl_id, $language_array)) {
               $iwl_array[] = $language_array[$iwl_id];
             }
           }
@@ -768,7 +769,7 @@ class ClassReqser extends api_local\ApiBase {
                       $chrst = $this->getShopCharset();
                       while($qu_arr = $this->api_db_conn->apiDbFetchArray($qu)) {
                         foreach($qu_arr as $key => $value) {
-                          $value = $this->encode_utf8($chrst, $value, false, true); //JorisK must be set to utf-8 12.11.2023
+                          $value = $this->encode_utf8($chrst, $value, false, true); //JorisK must be set to utf-8 11-2023
                           $out_arr[$qu_arr[$uk]][$key] = $value;      
                         }
                       }
@@ -1210,5 +1211,20 @@ class ClassReqser extends api_local\ApiBase {
 
     return $fields;
   }
+
+    /**  
+   * public method getResellerID
+   *
+   * @return if Reseller ID File exists, return Reseller ID, else return false
+   */
+  public function getResellerID() {
+    if (file_exists(DIR_FS_API.'reqser/reseller_id.txt')){
+      $reseller_id = file_get_contents(DIR_FS_API.'reqser/reseller_id.txt');
+      return $reseller_id;
+    } else {
+      return false;
+    }
+  }
+
 }
 ?>
