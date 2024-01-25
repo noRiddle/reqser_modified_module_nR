@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   Automated Translated by Reqser.com using Modified Modul Version 2.4 on the 18.12.4023
+   Automated Translated by Reqser.com using Modified Modul Version 2.5 on the 25.01.2024
    ---------------------------------------------------------------------------------------*/
 
 
@@ -16,10 +16,10 @@
 |/  | |   | |   \  | |   | |   | | |___|
 |   n |___o |    R i |___d |__ d l |__e
 
-* Edit by JorisK Reqser.com 08-2023
+* © copyright JorisK Reqser.com 08-2023
 
 ***********************************************************/
-define('MODULE_SYSTEM_REQSER_TITLE', 'Автоматические переводы DeepL через <i>Reqser.</i>com, версия модуля %s<br />- сборка для <i>Reqser</i>.com -<br />&copy; <a href="http://www.revilonetz.de/kontakt" target="_blank" title="Kontaktiere noRiddle" style="color:#02afc3;">noRiddle</a> и &copy; <a href="https://www.reqser.com" target="_blank" title="Kontaktiere Reqser" style="color:#02afc3;">Reqser.com</a> (07-2023 - ' . date('m-Y') . ')');
+define('MODULE_SYSTEM_REQSER_TITLE', 'Автоматические переводы DeepL через Reqser <i>.</i>com, версия модуля %s<br />- сборка для <i>Reqser</i>.com -<br />&copy; <a href="http://www.revilonetz.de/kontakt" target="_blank" title="Kontaktiere noRiddle" style="color:#02afc3;">noRiddle</a> и &copy; <a href="https://www.reqser.com" target="_blank" title="Kontaktiere Reqser" style="color:#02afc3;">Reqser.com</a> (07-2023 - ' . date('m-Y') . ')');
 define('MODULE_SYSTEM_REQSER_DESCRIPTION', '
 <a href="https://www.reqser.com" target="_blank"><img src="images/reqser_modul/modul_logo.png" border=0 width="400px"></a></br> Системный модуль для активации и настройки переводов через <i><a href="https://reqser.com/" target="_blank">reqser.com</i></a>');
 define('MODULE_SYSTEM_REQSER_STATUS_TITLE', '<h2>Основные настройки</h2>Активировать модуль?');
@@ -39,7 +39,7 @@ define('MODULE_SYSTEM_REQSER_MORE_TABLES_DESC', 'Выберите другие �
 define('MODULE_SYSTEM_REQSER_MORE_TABLES_ADD_TITLE', 'Другие таблицы базы данных (недоступные для выбора выше)');
 define('MODULE_SYSTEM_REQSER_MORE_TABLES_ADD_DESC', 'Укажите здесь другие таблицы базы данных, которые необходимо перевести, разделяя их запятыми.<br />(Для расширений с новыми "немодифицированными стандартными" таблицами)');
 define('MODULE_SYSTEM_REQSER_LESS_TABLES_TITLE', 'Исключить столы');
-define('MODULE_SYSTEM_REQSER_LESS_TABLES_DESC', 'Введите таблицы, которые необходимо исключить из перевода, через запятую.<br />(Необходимо только в том случае, если все стандартные таблицы выбраны выше и некоторые из них должны быть исключены).');
+define('MODULE_SYSTEM_REQSER_LESS_TABLES_DESC', 'Введите таблицы, которые необходимо исключить из перевода, разделяя их запятыми.<br />(Необходимо только в том случае, если все стандартные таблицы выбраны выше и некоторые из них должны быть исключены).');
 define('MODULE_SYSTEM_REQSER_FROM_WHICH_LANG_TITLE', 'С какого языка переводить?');
 define('MODULE_SYSTEM_REQSER_FROM_WHICH_LANG_DESC', 'С какого языка следует выполнять перевод?');
 define('MODULE_SYSTEM_REQSER_INTO_WHICH_LANGS_TITLE', 'На какие языки я могу переводить? ' . draw_tooltip('Дополнительные языки можно добавить на сайте <i><a href="https://reqser.com/" target="_blank">reqser.com</i></a>.'));
@@ -62,3 +62,7 @@ define('MODULE_SYSTEM_REQSER_API_KEY_EMPTY_ERR', 'API-ключ не был вв�
 define('MODULE_SYSTEM_REQSER_CURL_ERR', 'cURL ERROR:<br />%s');
 define('MODULE_SYSTEM_REQSER_INTO_LANGS_EMPTY_ERR', 'Нет выбранного языка для перевода!');
 define('MODULE_SYSTEM_REQSER_IWL_IN_FWL_ERR', 'В разделе "Перевести на какие языки?" не должно быть языка, который был выбран в разделе "Перевести с какого языка?".');
+define('MODULE_SYSTEM_REQSER_ADMIN_MESSAGE', 'Модуль Reqser.com DeepL после сохранения автоматически переведет все иностранные языки, активированные в модуле для данного продукта.');
+define('MODULE_SYSTEM_REQSER_ADMIN_MISSING_API_KEY', 'У модуля Reqser.com Deepl Translator нет ключа API, пожалуйста, введите ключ API');
+define('MODULE_SYSTEM_REQSER_ADMIN_INSTALLED_NOT_ACTIVATED', 'Модуль Reqser.com Deepl Translator не активирован, пожалуйста, активируйте модуль в разделе Модуль->Системный модуль');
+define('MODULE_SYSTEM_REQSER_ADMIN_MESSAGE_MISSING_CONNECTION', 'Модуль Reqser.com Deepl Translator не имеет подключения!');
