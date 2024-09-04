@@ -15,10 +15,10 @@
 
 ***********************************************************/
 
-define('MODULE_SYSTEM_REQSER_TITLE', 'Automatische DeepL &Uuml;bersetzungen via <i>Reqser.com</i>, Modul-Version %s<br />- build for <i>Reqser.com</i> -<br />&copy; <a href="http://www.revilonetz.de/kontakt" target="_blank" title="Kontaktiere noRiddle" style="color:#02afc3;">noRiddle</a> und &copy; <a href="https://www.reqser.com" target="_blank" title="Kontaktiere Reqser" style="color:#02afc3;">Reqser.com</a> (07-2023 - '.date('m-Y').')');
+define('MODULE_SYSTEM_REQSER_TITLE', 'AI-Tools f&uuml;r &Uuml;bersetzungen und SEO via <i>Reqser.com</i>, Modul-Version %s<br />- build for <i>Reqser.com</i> -<br />&copy; <a href="http://www.revilonetz.de/kontakt" target="_blank" title="Kontaktiere noRiddle" style="color:#02afc3;">noRiddle</a> und &copy; <a href="https://www.reqser.com" target="_blank" title="Kontaktiere Reqser" style="color:#02afc3;">Reqser.com</a> (07-2023 - '.date('m-Y').')');
 define('MODULE_SYSTEM_REQSER_DESCRIPTION', '
 <a href="https://www.reqser.com" target="_blank"><img src="images/reqser_modul/modul_logo.png" border=0 width="400px"></a></br>
-System-Modul f&uuml;r die Aktivierung und Konfiguration von &Uuml;bersetzungen via <i><a href="https://reqser.com/" target="_blank">reqser.com</i></a>');
+System Modul f&uuml;r die Verbindung mit DeepL, OpenAI und Neuroflash via <i><a href="https://reqser.com/" target="_blank">reqser.com</a></i>');
 
 define('MODULE_SYSTEM_REQSER_STATUS_TITLE', '<h2>Grundeinstellungen</h2>Modul aktivieren?');
 define('MODULE_SYSTEM_REQSER_STATUS_DESC', '');
@@ -53,6 +53,11 @@ define('MODULE_SYSTEM_REQSER_LANGUAGE_FILES_SETTING_TITLE', 'Sprachdateien autom
 define('MODULE_SYSTEM_REQSER_LANGUAGE_FILES_SETTING_DESC', 'Sollen die &uuml;bersetzten Sprachdateien automatisch in Ihren Shop &uuml;bertragen oder jede Sprachdatei manuell in Reqser ausgew&auml;hlt werden ?<br />Ja = Sprachdateien automatisch / Nein = manuell &uuml;bertragen');
 define('MODULE_SYSTEM_REQSER_PROTOCOL_ACC_TITLE', '<hr /><h2>Sicherheit</h2>API-Zugriffe protokollieren?');
 define('MODULE_SYSTEM_REQSER_PROTOCOL_ACC_DESC', 'Sollen API-Zugriffe protokolliert werden?<br />(Logs sind in <i>/api/reqser/logs/</i> zu finden.)');
+define('MODULE_SYSTEM_REQSER_DISABLE_BASE_LANGUAGE_EDIT_TITLE', 'Bearbeiten der Grundsprache verhindern?');
+define('MODULE_SYSTEM_REQSER_DISABLE_BASE_LANGUAGE_EDIT_DESC', 'Damit die Suchmaschinenoptimierung der Texte in der Grundsprache erfolgen kann, sollte das Bearbeiten der Grundsprache erlaubt sein.<br />Ja = Bearbeiten verhindern / Nein = Bearbeiten erlauben');
+define('MODULE_SYSTEM_REQSER_SANITIZE_STRINGS_TITLE', 'Sollen "scripte" und "iframe" aus den Texten entfernt werden?');
+define('MODULE_SYSTEM_REQSER_SANITIZE_STRINGS_DESC', 'Falls in den Texten beispielsweise YouTube-Videos eingebunden oder Animationen vorhanden sind, sollten diese Tags nicht entfernt werden. Andernfalls könnten die von uns bearbeiteten Texte an Funktionalität verlieren.<br />Ja = Entfernen / Nein = Nicht entfernen');
+
 define('MODULE_SYSTEM_REQSER_BROWSER_TEST_TITLE', 'Test im Browser ?');
 define('MODULE_SYSTEM_REQSER_BROWSER_TEST_DESC', 'Im Browser testen ohne Header zu senden?<br /><span class="alrt">!!! Muß in Live-Betrieb der API deaktiviert sein !!!</span>');
 
@@ -71,4 +76,7 @@ define('MODULE_SYSTEM_REQSER_ADMIN_MESSAGE', 'Das Reqser.com DeepL Modul wird al
 define('MODULE_SYSTEM_REQSER_ADMIN_MISSING_API_KEY', 'Reqser.com Deepl Translator Modul hat kein API Key, bitte ein API Key hinterlegen');
 define('MODULE_SYSTEM_REQSER_ADMIN_INSTALLED_NOT_ACTIVATED', 'Reqser.com Deepl Translator Modul nicht aktiviert, bitte aktivieren Sie das Modul unter Module->System Module');
 define('MODULE_SYSTEM_REQSER_ADMIN_MESSAGE_MISSING_CONNECTION', 'Reqser.com Deepl Translator Modul hat keine Verbindung!');
-define('MODULE_SYSTEM_REQSER_ADMIN_MESSAGE_CONNECTION_LOADING', 'Reqser.com Verbindung wird geprüft, bitte warten.');
+define('MODULE_SYSTEM_REQSER_ADMIN_MESSAGE_CONNECTION_LOADING', 'Reqser.com Verbindung wird gepr&uuml;ft, bitte warten.');
+
+define('MODULE_SYSTEM_REQSER_ADMIN_CATEGORIES_SEO_SETTINGS_LOADING', 'SEO Einstellungen werden geladen, bitte warten.');
+define('MODULE_SYSTEM_REQSER_ADMIN_CATEGORIES_SEO_FORM_PARAMS_MISSING', 'Ihre Eingaben sind nicht vollst&auml;ndig, bitte &uuml;berpr&uuml;fen:');

@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   Automated Translated by Reqser.com using Modified Modul Version 3.1 on the 09.04.2024
+   Automated Translated by Reqser.com using Modified Modul Version 3.4 on the 24.07.2024
    ---------------------------------------------------------------------------------------*/
 
 
@@ -19,9 +19,9 @@
 * © copyright JorisK Reqser.com 08-2023
 
 ***********************************************************/
-define('MODULE_SYSTEM_REQSER_TITLE', 'Automatic DeepL translations via <i>Reqser.</i>com, module version %s<br />- build for <i>Reqser</i>.com -<br />&copy; <a href="http://www.revilonetz.de/kontakt" target="_blank" title="Kontaktiere noRiddle" style="color:#02afc3;">noRiddle</a> and &copy; <a href="https://www.reqser.com" target="_blank" title="Kontaktiere Reqser" style="color:#02afc3;">Reqser.com</a> (07-2023 - ' . date('m-Y') . ')');
+define('MODULE_SYSTEM_REQSER_TITLE', 'AI tools for translations and SEO via <i>Reqser.</i>com, module version %s<br />- build for <i>Reqser</i>.com -<br />&copy; <a href="http://www.revilonetz.de/kontakt" target="_blank" title="Kontaktiere noRiddle" style="color:#02afc3;">noRiddle</a> and &copy; <a href="https://www.reqser.com" target="_blank" title="Kontaktiere Reqser" style="color:#02afc3;">Reqser.com</a> (07-2023 - ' . date('m-Y') . ')');
 define('MODULE_SYSTEM_REQSER_DESCRIPTION', '
-<a href="https://www.reqser.com" target="_blank"><img src="images/reqser_modul/modul_logo.png" border=0 width="400px"></a></br> System module for the activation and configuration of translations via <i><a href="https://reqser.com/" target="_blank">reqser.com</i></a>');
+<a href="https://www.reqser.com" target="_blank"><img src="images/reqser_modul/modul_logo.png" border=0 width="400px"></a></br> System module for connection with DeepL, OpenAI and Neuroflash via <i><a href="https://reqser.com/" target="_blank">reqser.com</a></i>');
 define('MODULE_SYSTEM_REQSER_STATUS_TITLE', '<h2>Basic settings</h2>Activate module?');
 define('MODULE_SYSTEM_REQSER_STATUS_DESC', '');
 define('MODULE_SYSTEM_REQSER_REQSER_API_KEY_TITLE', 'Reqser API key');
@@ -54,6 +54,10 @@ define('MODULE_SYSTEM_REQSER_LANGUAGE_FILES_SETTING_TITLE', 'Transfer language f
 define('MODULE_SYSTEM_REQSER_LANGUAGE_FILES_SETTING_DESC', 'Should the translated language files be automatically transferred to your store or should each language file be selected manually in Reqser?<br />Yes = transfer language files automatically / No = transfer manually');
 define('MODULE_SYSTEM_REQSER_PROTOCOL_ACC_TITLE', '<hr /><h2>Security</h2>Log API accesses?');
 define('MODULE_SYSTEM_REQSER_PROTOCOL_ACC_DESC', 'Should API accesses be logged?<br />(Logs can be found in <i>/api/reqser/logs/</i> ).');
+define('MODULE_SYSTEM_REQSER_DISABLE_BASE_LANGUAGE_EDIT_TITLE', 'Prevent editing of the basic language?');
+define('MODULE_SYSTEM_REQSER_DISABLE_BASE_LANGUAGE_EDIT_DESC', 'Editing the basic language should be allowed so that the search engine optimization of the texts can take place in the basic language.<br />Yes = Prevent editing / No = Allow editing');
+define('MODULE_SYSTEM_REQSER_SANITIZE_STRINGS_TITLE', 'Should "scripte" and "iframe" be removed from the texts?');
+define('MODULE_SYSTEM_REQSER_SANITIZE_STRINGS_DESC', 'If, for example, YouTube videos or animations are included in the texts, these tags should not be removed. Otherwise, the texts we edit could lose functionality.<br />Yes = Remove / No = Do not remove');
 define('MODULE_SYSTEM_REQSER_BROWSER_TEST_TITLE', 'Test in the browser ?');
 define('MODULE_SYSTEM_REQSER_BROWSER_TEST_DESC', 'Test in the browser without sending headers?<br /><span class="alrt">!!! Must be deactivated in live operation of the API !!!</span>');
 define('MODULE_SYSTEM_REQSER_API_KEY_WRONG_ERR', 'The "Reqser API key" stored here in the module does not match the one stored at <i>reqser.com</i>.<br />Please log in to <i>reqser</i>.com and check the API key or, if necessary, retrieve it again and save it here.');
@@ -68,3 +72,5 @@ define('MODULE_SYSTEM_REQSER_ADMIN_MISSING_API_KEY', 'Reqser.com Deepl Translato
 define('MODULE_SYSTEM_REQSER_ADMIN_INSTALLED_NOT_ACTIVATED', 'Reqser.com Deepl Translator module not activated, please activate the module under Module->System Module');
 define('MODULE_SYSTEM_REQSER_ADMIN_MESSAGE_MISSING_CONNECTION', 'Reqser.com Deepl Translator module has no connection!');
 define('MODULE_SYSTEM_REQSER_ADMIN_MESSAGE_CONNECTION_LOADING', 'Reqser.com connection is being checked, please wait.');
+define('MODULE_SYSTEM_REQSER_ADMIN_CATEGORIES_SEO_SETTINGS_LOADING', 'SEO settings are loading, please wait.');
+define('MODULE_SYSTEM_REQSER_ADMIN_CATEGORIES_SEO_FORM_PARAMS_MISSING', 'Your entries are not complete, please check:');
