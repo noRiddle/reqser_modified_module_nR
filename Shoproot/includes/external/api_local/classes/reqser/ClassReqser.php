@@ -36,7 +36,7 @@ class ClassReqser extends api_local\ApiBase {
   public function __construct($subp = '') {
     parent::__construct($subp);
 
-    $this->api_reqser_version = '4.3';
+    $this->api_reqser_version = '4.4';
 
     $this->browser_mode = false;
     $this->dev_mode = true;
@@ -1698,6 +1698,7 @@ class ClassReqser extends api_local\ApiBase {
    */
   protected function callSettingsChange_reqser_config() {
     $received_data = file_get_contents('php://input');
+    $out_arr = array('error' => array('message' => '', 'type' => 'empty', 'code' => null));
       if ($received_data != '') {
         $dec_rec_data = json_decode($received_data, true);
         $dec_rec_data = $this->purifyResp($dec_rec_data);
@@ -1707,19 +1708,19 @@ class ClassReqser extends api_local\ApiBase {
         } 
         if (isset($dec_rec_data['request_on_orders_edit']) && ($dec_rec_data['request_on_orders_edit'] === 'true' || $dec_rec_data['request_on_orders_edit'] === 'false')){
           $out_arr = array('succes' => 'Settings updated');
-          if (defined('MODULE_SYSTEM_REQSER_REQUEST_ON_ORDERS_EDIT')) $this->api_db_conn->apiDbQuery("UPDATE configuration SET configuration_value = '".$dec_rec_data['request_on_start']."' WHERE configuration_key = 'MODULE_SYSTEM_REQSER_REQUEST_ON_ORDERS_EDIT'");
+          if (defined('MODULE_SYSTEM_REQSER_REQUEST_ON_ORDERS_EDIT')) $this->api_db_conn->apiDbQuery("UPDATE configuration SET configuration_value = '".$dec_rec_data['request_on_orders_edit']."' WHERE configuration_key = 'MODULE_SYSTEM_REQSER_REQUEST_ON_ORDERS_EDIT'");
         } 
         if (isset($dec_rec_data['request_on_products_edit']) && ($dec_rec_data['request_on_products_edit'] === 'true' || $dec_rec_data['request_on_products_edit'] === 'false')){
           $out_arr = array('succes' => 'Settings updated');
-          if (defined('MODULE_SYSTEM_REQSER_REQUEST_ON_PRODUCTS_EDIT')) $this->api_db_conn->apiDbQuery("UPDATE configuration SET configuration_value = '".$dec_rec_data['request_on_start']."' WHERE configuration_key = 'MODULE_SYSTEM_REQSER_REQUEST_ON_PRODUCTS_EDIT'");
+          if (defined('MODULE_SYSTEM_REQSER_REQUEST_ON_PRODUCTS_EDIT')) $this->api_db_conn->apiDbQuery("UPDATE configuration SET configuration_value = '".$dec_rec_data['request_on_products_edit']."' WHERE configuration_key = 'MODULE_SYSTEM_REQSER_REQUEST_ON_PRODUCTS_EDIT'");
         } 
         if (isset($dec_rec_data['request_on_seo_products_edit']) && ($dec_rec_data['request_on_seo_products_edit'] === 'true' || $dec_rec_data['request_on_seo_products_edit'] === 'false')){
           $out_arr = array('succes' => 'Settings updated');
-          if (defined('MODULE_SYSTEM_REQSER_REQUEST_ON_SEO_PRODUCTS_EDIT')) $this->api_db_conn->apiDbQuery("UPDATE configuration SET configuration_value = '".$dec_rec_data['request_on_start']."' WHERE configuration_key = 'MODULE_SYSTEM_REQSER_REQUEST_ON_SEO_PRODUCTS_EDIT'");
+          if (defined('MODULE_SYSTEM_REQSER_REQUEST_ON_SEO_PRODUCTS_EDIT')) $this->api_db_conn->apiDbQuery("UPDATE configuration SET configuration_value = '".$dec_rec_data['request_on_seo_products_edit']."' WHERE configuration_key = 'MODULE_SYSTEM_REQSER_REQUEST_ON_SEO_PRODUCTS_EDIT'");
         } 
         if (isset($dec_rec_data['request_on_categories_edit']) && ($dec_rec_data['request_on_categories_edit'] === 'true' || $dec_rec_data['request_on_categories_edit'] === 'false')){
           $out_arr = array('succes' => 'Settings updated');
-          if (defined('MODULE_SYSTEM_REQSER_REQUEST_ON_CATEGORIES_EDIT')) $this->api_db_conn->apiDbQuery("UPDATE configuration SET configuration_value = '".$dec_rec_data['request_on_start']."' WHERE configuration_key = 'MODULE_SYSTEM_REQSER_REQUEST_ON_CATEGORIES_EDIT'");
+          if (defined('MODULE_SYSTEM_REQSER_REQUEST_ON_CATEGORIES_EDIT')) $this->api_db_conn->apiDbQuery("UPDATE configuration SET configuration_value = '".$dec_rec_data['request_on_categories_edit']."' WHERE configuration_key = 'MODULE_SYSTEM_REQSER_REQUEST_ON_CATEGORIES_EDIT'");
         } 
         if (isset($dec_rec_data['image_tags_load_frontent_main_image']) && ($dec_rec_data['image_tags_load_frontent_main_image'] === 'true' || $dec_rec_data['image_tags_load_frontent_main_image'] === 'false')){
           $out_arr = array('succes' => 'Settings updated');
